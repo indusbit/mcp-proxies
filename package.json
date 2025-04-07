@@ -25,5 +25,10 @@
   },
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/indusbit/mcp-proxy"
+  },
+  "homepage": "https://github.com/indusbit/mcp-proxy"
 }
