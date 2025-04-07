@@ -1,13 +1,16 @@
 {
-  "name": "mcp-proxies",
+  "name": "@indusbit/mcp-proxy",
   "version": "1.0.0",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "bin": {
+    "mcp-proxy": "./bin/mcp-proxy.js"
+  },
   "scripts": {
     "build": "tsc",
     "start": "node dist/index.js",
     "dev": "tsc --watch",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prepare": "npm run build"
   },
   "keywords": [],
   "author": "",

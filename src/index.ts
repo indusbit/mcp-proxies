@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import { proxy as StdioProxy } from "./stdio";
 
 const main = async () => {
