@@ -1,10 +1,18 @@
-/**
- * Main entry point for the mcp-proxies package
- */
+import { proxy as StdioProxy } from "./stdio";
 
-export const greet = (name: string): string => {
-  return `Hello, ${name}!`;
+const main = async () => {
+  // based on args, decide which proxy to use
+  const proxyType = process.argv[2];
+  try {
+    if (proxyType === "stdio") {
+      await StdioProxy();
+    } else {
+      console.error(`Unknown proxy type: ${proxyType}`);
+      process.exit(1);
+    }
+  } catch (error) {
+    console.error("Error in proxy:", error);
+  }
 };
 
-// Example usage
-console.log(greet('TypeScript'));
+main();
