@@ -6,6 +6,21 @@ Currently supports stdio proxy with Server-Sent Events (SSE) for bidirectional c
 
 ## Usage
 
+### Installation
+
+Wherever you have to put the command to run your MCP server, add the following command:
+
+```bash
+npx -y @indusbit/mcp-proxy stdio
+```
+
+By default, it connects to `http://localhost:4000/sse`.
+
+### Environment Variables
+
+- `MCP_SERVER_URL`: The URL for the SSE connection
+- `MCP_LOG_FILE`: Path to a log file for debugging (if not set, logging is disabled)
+
 ### Command Line
 
 After cloning the repository, install dependencies:
